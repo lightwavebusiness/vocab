@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title >Add</ion-title>
+    <ion-button [routerLink]="['/home']" class="back"><ion-icon name="arrow-round-back"></ion-icon></ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<form  [formGroup]="addForm">
+<ion-input formControlName="word" placeholder="A Amazing Word"></ion-input>
+<ion-textarea formControlName="description" rows="5" cols="40"  type="text" class="form-control" id="description" name="description" placeholder="Definition"></ion-textarea>
+<ion-input formControlName="sentence" type="text" class="form-control" id="sentence" name="sentence" placeholder="Used In A Sentence"></ion-input>
+
+<ion-button (click)="AddWord()">Submit</ion-button>
+</form>
+
+</ion-content>

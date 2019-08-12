@@ -1,0 +1,8 @@
+{
+  "name": "pokedexApp",
+  "integrations": {
+    "cordova": {},
+    "capacitor": {}
+  },
+  "type": "angular"
+}

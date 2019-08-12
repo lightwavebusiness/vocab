@@ -1,0 +1,19 @@
+body{
+    background-color: white;
+}
+
+h2{
+    font-size: 1.25rem;
+    font-display: bold;
+}
+p{
+    display: flex;
+    width: 50vw;
+    float: right;
+    font-size: 0.7rem;
+    margin: 10px;
+}
+ion-label{
+    min-height: 15vh;
+    height: fit-content;
+}

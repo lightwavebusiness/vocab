@@ -1,0 +1,26 @@
+body{
+    text-align: center;
+}
+Form{
+    text-align: center;
+    display: block;
+    height: 70vh;
+    margin: 5vh;
+}
+ion-input{
+    height: 25%;
+    width: 100%;
+    margin-bottom: 20px;
+    border-radius: 25px;
+    box-shadow: 5px 10px rgb(228, 226, 226);
+}
+ion-textarea{
+    height: 25%;
+    width: 100%;
+    margin-bottom: 20px;
+    border-radius: 25px;
+    box-shadow: 5px 10px rgb(228, 226, 226);
+}
+ion-icon{
+    font-display: bold;
+}

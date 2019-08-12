@@ -11,7 +11,7 @@
 <ion-textarea formControlName="description" rows="5" cols="40"  type="text" class="form-control" id="description" name="description" placeholder="Definition"></ion-textarea>
 <ion-input formControlName="sentence" type="text" class="form-control" id="sentence" name="sentence" placeholder="Used In A Sentence"></ion-input>
 
-<ion-button (click)="AddWord()">Submit</ion-button>
+<ion-button (click)="AddWord()" type="submit" [disabled]="!addForm.valid">Submit</ion-button>
 </form>
 
 </ion-content>

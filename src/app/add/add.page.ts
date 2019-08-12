@@ -3,6 +3,7 @@ import { IonicStorageModule } from '@ionic/storage';
 import { WordService } from '../services/dictonary.service';
 import { FormsModule, FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { AlertController } from '@ionic/angular';
 
 
 @Component({
@@ -17,10 +18,12 @@ export class AddPage implements OnInit {
   private storage: IonicStorageModule,
   private wordService: WordService,
   private formBuilder: FormBuilder,
-  private router: Router
-  ) { 
+  private router: Router,
+  private alert: AlertController,
+ ) 
+  { 
     this.addForm = formBuilder.group({
-    word: ['', Validators.compose([Validators.required])],
+    word: ['', Validators.compose([Validators.required, Validators.minLength(2)])],
     description: ['', Validators.compose([Validators.required])],
     sentence: ['', Validators.compose([Validators.required])]
      })
@@ -29,15 +32,26 @@ export class AddPage implements OnInit {
   ngOnInit() {
   }
 
-  AddWord() {
+  async AddWord() {
     console.log("Adding Word")
     console.log(this.addForm.value.word)
 
-    this.wordService.addWord(
+   if( this.wordService.addWord(
       this.addForm.value.word, 
       this.addForm.value.description,
-      this.addForm.value.sentence)
-    this.router.navigateByUrl('/home');
+      this.addForm.value.sentence)) {
+        this.router.navigateByUrl('/home');
+    } else {
+        const alert = await this.alert.create({
+          header: '!Alert!',
+          subHeader: 'A Double Request To Add The Same Word Been Made',
+          message: 'Boi!! Same word again?.',
+          buttons: ['OK']
+        });
+    
+        await alert.present();
+      }
+
   }
 
 }

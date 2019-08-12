@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { map } from 'rxjs/operators';
+import { map, filter } from 'rxjs/operators';
+import { Storage } from '@ionic/storage';
 
 @Injectable({
   providedIn: 'root'
@@ -10,7 +11,17 @@ export class WordService {
 
   words = []
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient, private storage: Storage) {
+    //get words from local storage
+    this.getStorage();
+  }
+
+
+  async getStorage() {
+    this.words = await this.storage.get("Word");
+    if(this.words === null) this.words = []
+    console.log(this.words)
+  }
 
   // getWord(offset = 0) {
   //   return this.http
@@ -29,9 +40,6 @@ export class WordService {
 
 
   getWords() {
-    console.log("Current Words: ", this.words)
-
-
     return this.words.map(
       word => { console.log(word); 
         return word; }
@@ -43,9 +51,16 @@ export class WordService {
   {
     console.log("Dictionary Service - Add Word: ", word_, description_, sentence_)
 
+    if(this.words.filter((word) => {word.word === word_})) {
+      return false;
+    }
+
+
     this.words.push({word: word_, description: description_, sentence: sentence_})
 
-    console.log(this.words)
+    this.storage.set("Word", this.words)
+    return true;
+    //console.log(this.words)
   }
 
 

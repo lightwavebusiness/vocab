@@ -5,8 +5,9 @@ const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', loadChildren: './home/home.module#HomePageModule' },
   { path: 'home/:index', loadChildren: './details/details.module#DetailsPageModule' },
-  { path: 'details', loadChildren: './details/details.module#DetailsPageModule' },
+  { path: 'details', loadChildren: './details/details.module#DetailsPageModule', canActivate: false},
   { path: 'add', loadChildren: './add/add.module#AddPageModule' },
+  { path: 'flash/:word', loadChildren: './flash/flash.module#FlashPageModule' },
 ];
  
 @NgModule({

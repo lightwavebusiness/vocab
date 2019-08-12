@@ -2,7 +2,8 @@ import { PokemonService } from './../services/pokemon.service';
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { IonInfiniteScroll } from '@ionic/angular';
 import { WordService } from '../services/dictonary.service';
- 
+import { Storage } from '@ionic/storage';
+
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
@@ -14,7 +15,7 @@ export class HomePage implements OnInit {
  
   @ViewChild(IonInfiniteScroll, {static: false}) infinite: IonInfiniteScroll;
  
-  constructor(private pokeService: PokemonService, private wordService: WordService) { }
+  constructor(private pokeService: PokemonService, private wordService: WordService, public storage: Storage) { }
  
   ngOnInit()  {
     this.loadPokemon();

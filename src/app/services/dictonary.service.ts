@@ -63,7 +63,9 @@ export class WordService {
     //console.log(this.words)
   }
 
-
+    getWord(findWord: string) {
+      return this.words.filter((word) => { word.word === findWord});
+    }
 
 
 }

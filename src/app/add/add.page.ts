@@ -36,7 +36,7 @@ export class AddPage implements OnInit {
     console.log("Adding Word")
     console.log(this.addForm.value.word)
 
-   if( this.wordService.addWord(
+    if(this.wordService.addWord(
       this.addForm.value.word, 
       this.addForm.value.description,
       this.addForm.value.sentence)) {

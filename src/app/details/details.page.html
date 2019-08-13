@@ -3,12 +3,12 @@
     <ion-buttons slot="start">
       <ion-back-button defaultHref="home"></ion-back-button>
     </ion-buttons>
-    <ion-title class="ion-text-capitalize">{{ details?.name }}</ion-title>
+    <ion-title class="ion-text-capitalize">{{ word.word }}</ion-title>
   </ion-toolbar>
 </ion-header>
  
 <ion-content>
-  
+<!--   
   <div *ngIf="details">
     <ion-slides pager="true" [options]="slideOpts">
       <ion-slide *ngFor="let sprite of details.images">
@@ -19,7 +19,7 @@
     <ion-card>
       <ion-card-header>
         <ion-card-title class="ion-text-capitalize">#{{ details.id }} {{ details.name }}
-          <ion-chip color="primary" *ngFor="let t of details.types">
+          <ion-chip color="primary" *ngFor="let t of words.word">
             <ion-label>{{ t.type.name }}</ion-label>
           </ion-chip>
         </ion-card-title>
@@ -44,5 +44,5 @@
       </ion-card-content>
     </ion-card>
   </div>
- 
+  -->
 </ion-content>

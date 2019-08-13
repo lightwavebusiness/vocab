@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { WordService } from '../services/dictonary.service';
 
 @Component({
   selector: 'app-flash',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FlashPage implements OnInit {
 
-  constructor() { }
+  constructor(
+    private wordService: WordService
+  ) { }
 
   ngOnInit() {
   }
+  
 
 }

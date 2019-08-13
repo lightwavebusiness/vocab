@@ -9,7 +9,7 @@ import { Storage } from '@ionic/storage';
 export class WordService {
   baseUrl = ''; 
 
-  words = []
+  words = [];
 
   constructor(private http: HttpClient, private storage: Storage) {
     //get words from local storage
@@ -20,7 +20,7 @@ export class WordService {
   async getStorage() {
     this.words = await this.storage.get("Word");
     if(this.words === null) this.words = []
-    console.log(this.words)
+   // console.log(this.words)
   }
 
   // getWord(offset = 0) {
@@ -63,6 +63,11 @@ export class WordService {
     //console.log(this.words)
   }
 
+  async getWord(findWord: string) {
+    await this.getStorage()
+    let word = this.words.filter((word) => { console.log(word.word); return (word.word === findWord)})[0];
+    return word
+  }
 
 
 

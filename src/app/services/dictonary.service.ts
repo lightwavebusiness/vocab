@@ -63,18 +63,12 @@ export class WordService {
     //console.log(this.words)
   }
 
-<<<<<<< HEAD
   async getWord(findWord: string) {
     await this.getStorage()
     let word = this.words.filter((word) => { console.log(word.word); return (word.word === findWord)})[0];
     return word
   }
 
-=======
-    getWord(findWord: string) {
-      return this.words.filter((word) => { word.word === findWord});
-    }
->>>>>>> bb9d409edfb923b0d7bc140005f799f8205dc376
 
 
 }

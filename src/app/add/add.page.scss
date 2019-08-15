@@ -1,25 +1,67 @@
 body{
     text-align: center;
 }
+
+ion-title{
+    float: center;
+}
+
+
 Form{
     text-align: center;
     display: block;
     height: 70vh;
-    margin: 5vh;
+    margin-top: 5vh;
 }
+ion-content{
+    align-content: center;
+    
+}
+ion-item{
+    border-color: grey;
+    border: 1px solid black;
+    box-shadow: 5px 8px grey;
+    border-radius: 25px;
+    margin: 2.5vw;
+}
+ion-footer{
+    border-top: 0.5px solid grey;
+}
+ion-item p{
+    
+    display: flex;
+    float: right;
+    margin: 20px;
+    margin-top: 0px;
+    width: 50%;
+}
+ion-item h2{
+ font-size: 1.25rem;
+ font-weight: bold;
+ text-transform: uppercase;
+ margin: 20px
+}
+
+
+ion-item h3{
+ font-size: 1.125rem;
+ margin: 20px
+
+}
+h5{
+ margin: 10px;
+ font-size: 0.9rem
+}
+
 ion-input{
-    height: 25%;
-    width: 100%;
-    margin-bottom: 20px;
+    width: 60vw;
+    margin-left: 20vw;
+    margin-right: 20vw;
+    align-content: center;
+    border: 10px black;
+    text-align: center;
+    border: 1px solid black;
     border-radius: 25px;
-    box-shadow: 5px 10px rgb(228, 226, 226);
-}
-ion-textarea{
-    height: 25%;
-    width: 100%;
-    margin-bottom: 20px;
-    border-radius: 25px;
-    box-shadow: 5px 10px rgb(228, 226, 226);
 }
 ion-icon{
     font-display: bold;

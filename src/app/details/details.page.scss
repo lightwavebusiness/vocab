@@ -1,0 +1,49 @@
+ion-content{
+    align-content: center;
+    
+}
+ion-card{
+    border-color: grey;
+    border: 1px solid black;
+    box-shadow: 5px 8px grey;
+    border-radius: 25px;
+}
+ion-footer{
+    border-top: 0.5px solid grey;
+}
+ion-card p{
+    
+    display: flex;
+    float: right;
+    margin: 20px;
+    margin-top: 0px;
+    width: 50%;
+}
+ion-card h2{
+ font-size: 1.25rem;
+ font-weight: bold;
+ text-transform: uppercase;
+ margin: 20px
+}
+
+
+ion-card h3{
+ font-size: 1.125rem;
+ margin: 20px
+
+}
+h5{
+ margin: 10px;
+ font-size: 0.9rem
+}
+
+ion-input{
+    width: 60vw;
+    margin-left: 20vw;
+    margin-right: 20vw;
+    align-content: center;
+    border: 10px black;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 25px;
+}

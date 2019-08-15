@@ -1,19 +1,50 @@
-body{
-    background-color: white;
+ion-content{
+    align-content: center;
+    
+}
+ion-item{
+    border-color: grey;
+    border: 1px solid black;
+    box-shadow: 5px 8px grey;
+    border-radius: 25px;
+    margin: 2.5vw;
+}
+ion-footer{
+    border-top: 0.5px solid grey;
+}
+ion-item p{
+    
+    display: flex;
+    float: right;
+    margin: 20px;
+    margin-top: 0px;
+    width: 50%;
+}
+ion-item h2{
+ font-size: 1.25rem;
+ font-weight: bold;
+ text-transform: uppercase;
+ margin: 20px
 }
 
-h2{
-    font-size: 1.25rem;
-    font-display: bold;
+
+ion-item h3{
+ font-size: 1.125rem;
+ margin: 20px
+
 }
-p{
-    display: flex;
-    width: 50vw;
-    float: right;
-    font-size: 0.7rem;
-    margin: 10px;
+h5{
+ margin: 10px;
+ font-size: 0.9rem
 }
-ion-label{
-    min-height: 15vh;
-    height: fit-content;
+
+ion-input{
+    width: 60vw;
+    margin-left: 20vw;
+    margin-right: 20vw;
+    align-content: center;
+    border: 10px black;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 25px;
 }

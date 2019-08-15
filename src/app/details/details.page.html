@@ -3,11 +3,15 @@
     <ion-buttons slot="start">
       <ion-back-button defaultHref="home"></ion-back-button>
     </ion-buttons>
-    <ion-title class="ion-text-capitalize">{{ word.word }}</ion-title>
+    <ion-title class="ion-text-capitalize">Word: {{ word?.word }}</ion-title>
   </ion-toolbar>
 </ion-header>
  
 <ion-content>
+  <h2> sentence 1 : {{ word?.description}}</h2>
+  <h3> sentence 2 : {{ word?.sentence}}</h3>
+
+
 <!--   
   <div *ngIf="details">
     <ion-slides pager="true" [options]="slideOpts">

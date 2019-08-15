@@ -36,21 +36,22 @@ export class AddPage implements OnInit {
     console.log("Adding Word")
     console.log(this.addForm.value.word)
 
-    if(this.wordService.addWord(
+ if(await this.wordService.addWord(
       this.addForm.value.word, 
       this.addForm.value.description,
       this.addForm.value.sentence)) {
         this.router.navigateByUrl('/home');
-    } else {
-        const alert = await this.alert.create({
-          header: '!Alert!',
-          subHeader: 'A Double Request To Add The Same Word Been Made',
-          message: 'Boi!! Same word again?.',
-          buttons: ['OK']
-        });
-    
-        await alert.present();
       }
+//      else {
+//         const alert = await this.alert.create({
+//           header: '!Alert!',
+//           subHeader: 'A Double Request To Add The Same Word Been Made',
+//           message: 'Boi!! Same word again?.',
+//           buttons: ['OK']
+//         });
+    
+//         await alert.present();
+//       }
 
   }
 

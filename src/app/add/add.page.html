@@ -8,7 +8,9 @@
 <ion-content>
 <form  [formGroup]="addForm">
 <ion-input formControlName="word" placeholder="A Amazing Word"></ion-input>
-<ion-textarea formControlName="description" rows="5" cols="40"  type="text" class="form-control" id="description" name="description" placeholder="Definition"></ion-textarea>
+<br />
+<ion-input formControlName="description" type="text" class="form-control" id="description" name="description" placeholder="Used In A Sentence"></ion-input>
+<br />
 <ion-input formControlName="sentence" type="text" class="form-control" id="sentence" name="sentence" placeholder="Used In A Sentence"></ion-input>
 
 <ion-button (click)="AddWord()" type="submit" [disabled]="!addForm.valid">Submit</ion-button>

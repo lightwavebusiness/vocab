@@ -10,6 +10,8 @@ import { WordService } from '../services/dictonary.service';
   styleUrls: ['./details.page.scss'],
 })
 export class DetailsPage implements OnInit {
+  
+  
   word: any;
  
   slideOpts = {
@@ -23,10 +25,11 @@ export class DetailsPage implements OnInit {
   constructor(private wordService: WordService, private route: ActivatedRoute) { }
 
  
-   ngOnInit() {
+   async ngOnInit() {
     console.log("ng-word")
-    let word = this.route.snapshot.paramMap.get('Word');
-    this.word = this.wordService.getWord(word);
+    let paramword = this.route.snapshot.paramMap.get('word');
+    console.log(paramword)
+    this.word = await this.wordService.getWord(paramword);
     console.log(this.word);
 
   }

@@ -11,9 +11,21 @@ export class WordService {
 
   words = [];
 
+  word = null;
+
+
   constructor(private http: HttpClient, private storage: Storage) {
     //get words from local storage
     this.getStorage();
+
+    this.word = {
+      synonyms: [],
+      definitions:  [],
+      antonyms: [],
+      word: '',
+      sentences: [],
+      types: [],
+    }
   }
 
 
@@ -47,25 +59,31 @@ export class WordService {
   }
 
 
-  addWord(word_, description_, sentence_)
+  async addWord(word_, description_, sentence_)
   {
     console.log("Dictionary Service - Add Word: ", word_, description_, sentence_)
 
-    if(this.words.filter((word) => {word.word === word_})) {
+    var foundWord = await this.getWord(word_)
+console.log(foundWord)
+
+    if(foundWord) {
+
+      console.log("found word")
       return false;
-    }
+    } else {
 
 
     this.words.push({word: word_, description: description_, sentence: sentence_})
 
     this.storage.set("Word", this.words)
     return true;
+    }
     //console.log(this.words)
   }
 
   async getWord(findWord: string) {
     await this.getStorage()
-    let word = this.words.filter((word) => { console.log(word.word); return (word.word === findWord)})[0];
+    let word = this.words.filter((word) => { return (word.word === findWord)})[0];
     return word
   }
 

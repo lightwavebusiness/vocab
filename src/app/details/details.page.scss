@@ -2,6 +2,12 @@ ion-content{
     align-content: center;
     
 }
+ion-fab-button{
+    position: fixed;
+    bottom: 20px; /* Adjust to where you want it */
+    right: 20px; /* Adjust to where you want it */
+    z-index: 999;
+}
 ion-card{
     border-color: grey;
     border: 1px solid black;
@@ -27,14 +33,15 @@ ion-card h2{
 }
 
 
-ion-card h3{
+h2{
  font-size: 1.125rem;
- margin: 20px
+ margin: 20px;
+ float: center;
 
 }
 h5{
  margin: 10px;
- font-size: 0.9rem
+ font-size: 0.9rem;
 }
 
 ion-input{

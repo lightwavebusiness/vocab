@@ -7,9 +7,10 @@
   </ion-toolbar>
 </ion-header>
  
-<ion-content>
+<ion-content color="primary">
+  <ion-fab-button color="warning" [routerLink]="['/add']"><ion-icon name="add"></ion-icon></ion-fab-button>
   <h2> sentence 1 : {{ word?.description}}</h2>
-  <h3> sentence 2 : {{ word?.sentence}}</h3>
+  <h2> sentence 2 : {{ word?.sentence}}</h3>
 
 
 <!--   

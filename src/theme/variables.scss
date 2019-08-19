@@ -4,12 +4,13 @@
 /** Ionic CSS Variables **/
 :root {
   /** primary **/
-  --ion-color-primary: #DC0A2C;
+  --ion-color-primary:  url('../assets/background.svg') no-repeat 100% top/cover fixed ;
   --ion-color-primary-rgb: 220,10,44;
-  --ion-color-primary-contrast: #ffffff;
+  --ion-color-primary-contrast: #000000;
   --ion-color-primary-contrast-rgb: 255,255,255;
-  --ion-color-primary-shade: #c20927;
-  --ion-color-primary-tint: #e02341;
+  --ion-color-primary-shade: #fffd89;
+  --ion-color-primary-tint: #e9ff6f;
+  
 
   /** secondary **/
   --ion-color-secondary: #0cd1e8;
@@ -40,8 +41,8 @@
   --ion-color-warning-rgb: 255, 206, 0;
   --ion-color-warning-contrast: #ffffff;
   --ion-color-warning-contrast-rgb: 255, 255, 255;
-  --ion-color-warning-shade: #e0b500;
-  --ion-color-warning-tint: #ffd31a;
+  --ion-color-warning-shade: #ffdb49;
+  --ion-color-warning-tint: #fad543;
 
   /** danger **/
   --ion-color-danger: #f04141;

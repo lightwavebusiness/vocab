@@ -1,13 +1,27 @@
 ion-content{
     align-content: center;
+    backdrop-filter: blur(8px);
     
+}
+ion-toolbar{
+    background: transparent;
+}
+.list-md{
+    background: transparent !important;
+    
+}
+ion-fab-button{
+  position: fixed;
+  bottom: 20px; /* Adjust to where you want it */
+  right: 20px; /* Adjust to where you want it */
+  z-index: 999;
 }
 ion-item{
     border-color: grey;
     border: 1px solid black;
-    box-shadow: 5px 8px grey;
-    border-radius: 25px;
     margin: 2.5vw;
+    
+    
 }
 ion-footer{
     border-top: 0.5px solid grey;

@@ -6,6 +6,12 @@ ion-title{
     float: center;
 }
 
+ion-fab-button{
+    position: fixed;
+    bottom: 20px; /* Adjust to where you want it */
+    right: 20px; /* Adjust to where you want it */
+    z-index: 999;
+  }
 
 Form{
     text-align: center;
@@ -15,6 +21,7 @@ Form{
 }
 ion-content{
     align-content: center;
+    
     
 }
 ion-item{
@@ -57,11 +64,11 @@ ion-input{
     width: 60vw;
     margin-left: 20vw;
     margin-right: 20vw;
+    margin-top: 10vh;
     align-content: center;
     border: 10px black;
     text-align: center;
     border: 1px solid black;
-    border-radius: 25px;
 }
 ion-icon{
     font-display: bold;
